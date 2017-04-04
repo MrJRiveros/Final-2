@@ -17,6 +17,7 @@ h1{
 }
 #enlaces{
   float: right;
+  width: 50%;
 
 
 }
@@ -32,4 +33,120 @@ li{
 #enlaces ul li .actual {
   text-decoration:none;
 
+}
+#contenedor{
+  display: flex;
+  flex-direction: column;
+}
+#iPrincipal{
+  width: 100%;
+  text-align: center;
+  background-color: #82c3a6;
+  display: block;
+
+  vertical-align: middle;
+
+}
+#nhwk{
+  width: 80%;
+  margin: 2em;
+}
+#iSecundarias{
+  display: flex;
+  flex-direction: row;
+  background-color: #d5c75f;
+  border: 1px solid black;
+}
+#iSecundarias div{
+  text-align: center;
+  padding: 0.5em;
+  margin: 0.5em;
+}
+#contkand{
+  float: left;
+}
+#kand{
+  width: 50%;
+  animation: kandi2 1s;
+
+}
+#kand:hover{
+  box-shadow: 2px 2px #82c3a6;
+  border: 2px solid black;
+  animation: kandi 1s;
+  transform: rotate(10deg);
+
+  }
+
+#contbank{
+  float: right;
+}
+#bank{
+  width: 60%;
+  animation: bans2 1s;
+}
+#bank:hover{
+  box-shadow: 2px 2px #82c3a6;
+  border: 2px solid black;
+  animation: bans 1s;
+  transform: translateX(20px);
+  transform: translateY(-5px);
+}
+
+/*así puedes rotar la imagen de forma fluida
+transform: rotate(10deg);
+transition-duration: 1s;
+sólo lo colocas en el hover de la imagen
+no tienes que crear un aanimación
+
+y este es para la otra imagen
+transform: translateX(20px)
+translateY(-5px);
+transition-duration: 1s;
+*/
+
+@-webkit-keyframes kandi{
+  from{
+    position: relative;
+    transform: rotate(0deg);
+  }
+  to{
+    position: relative;
+    transform: rotate(10deg);
+  }
+}
+@-webkit-keyframes kandi2{
+  from{
+    position: relative;
+    transform: rotate(10deg);
+  }
+  to{
+    position: relative;
+    transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes bans{
+  from{
+    position: relative;
+    top: 0px;
+    right: 0px;
+  }
+  to{
+    position: relative;
+    top: 5px;
+    right: 20px;
+  }
+}
+
+@-webkit-keyframes bans2{
+  from{
+    position: relative;
+    top: 5px;
+    right: 20px;
+  }
+  to{
+    position: relative;
+    top: 0px;
+    right: 0px;
+  }
 }
