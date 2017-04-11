@@ -12,36 +12,44 @@
       <div id="titulo">
         <h1>Comenzando con la Fotografía</h1>
       </div>
-      <nav id="enlaces">
+      <div id="enlaces" style="text-align:center">
         <ul>
           <li><a href="index.html" class="actual">Inicio</a></li>
           <li><a href="pag/Bansky.html">Bansky</a></li>
-
-          <li><a href="pag/Kandinsky.html">Kandinsky</a></li>
-
+          <li><a href="pag/Kandinsky.html" target="_blank">Kandinsky</a></li>
         </ul>
-      </nav>
+      </div>
     </header>
     <section id="contenedor">
       <section id="iPrincipal">
-        <figure>
-          <a href="index.html"><img src="img/nighthwk.jpg" alt="nighthawk" id="nhwk"></a>
-        </figure>
+      <picture >
+          <a href="index.html" alt="nighthawk">
+          <source media="min-width:900px" srcset="img/nighthwk.jpg" id="nhwk" >
+          <source media="min-width:900px" srcset="img/nighthwk-p.jpg" id="nhwk" >
+          <img src="img/nighthwk.jpg" id="nhwk">
+          </a>
+        </picture>
       </section>
       <section id="iSecundarias">
         <div id="contkand">
-          <figure>
-            <a href="pag/Kandinsky.html" target="_blank"><img src="img/kand.jpg" title="Kandinsky" id="kand"> <br>
+          <picture >
+              <a href="pag/Kandinsky.html" alt="kandinsky">
+              <source media="min-width:900px" srcset="img/kand.jpg" id="kand" >
+              <source media="min-width:900px" srcset="img/kand-p.jpg-p.jpg" id="kand" >
+              <img src="img/kand.jpg" id="kand"> <br>
             <p>Kandinsky</p>
             </a>
-          </figure>
+          </picture>
         </div>
         <div id="contbank">
-          <figure>
-            <a href="pag/Bansky.html" target="_blank"><img src="img/bansky.jpg" title="Bansky" id="bank"> <br>
-            <p>Bansky</p>
+          <picture >
+              <a href="pag/Bansky.html" alt="bansky">
+              <source media="min-width:900px" srcset="img/bansky.jpg" id="bank" >
+              <source media="min-width:900px" srcset="img/bansky-p.jpg-p.jpg" id="bank" >
+              <img src="img/bansky.jpg" id="bank"> <br>
+            <p>Kandinsky</p>
             </a>
-          </figure>
+          </picture>
         </div>
       </section>
     </section>

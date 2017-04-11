@@ -9,16 +9,15 @@ body{
   display: flex;
   flex-direction: column;
   flex-flow: wrap;
+  animation: inicio 2s;
+  margin-top: 0px;
+
 }
 .contenedor{
+  width: 100%;
   background: #5b7989;
   border-radius: 10px 10px 0 0;
   display: flex;
-  flex-flow: wrap;
-
-}
-#contenedor{
-  min-width: 150px;
   flex-flow: wrap;
 }
 #titulo{
@@ -48,7 +47,7 @@ ul{
 
 }
 li{
-  padding: 30px;
+  padding: 10px;
 
 }
 #enlaces ul li .actual {
@@ -56,20 +55,21 @@ li{
 
 }
 #contenedor{
+  min-width: 150px;
+  flex-flow: wrap;
   display: flex;
   flex-direction: column;
 }
+
 #iPrincipal{
   width: 100%;
   text-align: center;
   background-color: #82c3a6;
-  display: block;
-
 }
 #nhwk{
   width: 80%;
-  margin: 0.2em;
-  min-width: 100%
+  margin: 0.5%;
+
 }
 #iSecundarias{
   display: flex;
@@ -81,6 +81,7 @@ li{
   text-align: center;
   padding: 0.5em;
   margin: 0.5em;
+  vertical-align: middle;
 }
 #contkand{
   float: left;
@@ -88,9 +89,10 @@ li{
 
 }
 #kand{
-  width: 50%;
+  margin-top: 3%;
+  width: 80%;
   animation: kandi2 1s;
-  min-width: 100%;
+
 }
 #kand:hover{
   box-shadow: 2px 2px #82c3a6;
@@ -105,9 +107,10 @@ li{
   text-align: center;
 }
 #bank{
-  width: 60%;
+  margin-top: 3%;
+  width: 90%;
   animation: bans2 1s;
-  min-width: 100%;
+
 
 }
 #bank:hover{
@@ -128,18 +131,18 @@ li{
   text-decoration: none;
 }
 
-/*así puedes rotar la imagen de forma fluida
-transform: rotate(10deg);
-transition-duration: 1s;
-sólo lo colocas en el hover de la imagen
-no tienes que crear un aanimación
 
-y este es para la otra imagen
-transform: translateX(20px)
-translateY(-5px);
-transition-duration: 1s;
-*/
-
+@-webkit-keyframes inicio{
+  0%{
+    margin-top: 150%;
+  }
+  33%{
+    margin-top: -5%;
+  }
+  100%{
+    margin-top: 0%;
+  }
+}
 @-webkit-keyframes kandi{
   from{
     position: relative;
@@ -222,23 +225,14 @@ footer div {
   margin-bottom: 0;
   font-size: 150%;
 }
-@media all and (min-width:900px) {
-  body{
-    margin: 2em;
-  }
-  .contenedor{
-    width: 100%;
-  }
-  #contenedor{
-    width: 100%;
-  }
-  footer{
-    width: 100%
-  }
-}
+
 @media (max-width:900px) {
   body{
-    margin: 0.5em;
+    margin-top: 0px;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    margin-bottom: 0px;
+
 
   }
   .contenedor{
@@ -250,7 +244,11 @@ footer div {
     width: 100%;
     text-align: center;
   }
-
+  #enlaces{
+    width: 100%;
+    text-align: center;
+    margin-left: -6%;
+  }
   section{
     width: 100%;
     text-align: center;
@@ -259,16 +257,26 @@ footer div {
     text-align: center;
   }
 
-#iSecundarias{
+  #iSecundarias{
   display: flex;
   flex-direction: column;
   margin: auto;
-}
-
+  }
+  #kand{
+  width: 90%
+  }
+  #bank{
+  width: 90%;
+  }
   footer{
     width: 100%;
+    text-align: center;
     display: flex;
     flex-direction: column;
   }
-}
+  footer div{
+    text-align: center;
+    margin-left: 35%;
+    margin-right: 50%;
+  }
 }
